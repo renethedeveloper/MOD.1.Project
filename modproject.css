@@ -6,7 +6,7 @@
   }
   body{
     width: 100vw;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/003/381/359/original/cocktail-neon-sign-glowing-neon-signboard-illustration-vector.jpg);
+    background-image: url(https://images2.alphacoders.com/848/848563.jpg);
     background-size: cover;
     height: 100vh;
    
@@ -17,18 +17,31 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
   .ingredientList{
-    color: #FFFF99;
+    background-color: black;
+    border-radius: 10px;
+    color: #FFD700;
     grid-column: 2;
+    grid-row: 2;
+    letter-spacing: 3px;
+    font-weight: 800;
     margin-right: 40px;
     font-size: x-large;
-    margin-left: 100px;
-
-    
-   
-  }
-  h3{
+    margin-left: 80px;
+    height: 300px;
+    width: 200px;
+}
+.listTitle{
+    height: 20px;
+    display: flex;
+    color:yellow;
+    margin-left: 70px;
+}
+  h2{
     margin-left: 40px;
-    color: #FFFF99 ;
+    color: rgb(243, 27, 243);
+    background-color: black;
+    border-radius: 15px;
+    
   }
   .header{
     display: flex;
@@ -42,62 +55,118 @@
     margin-left: 100px;
   }
   form{
-   
-    justify-content: space-between;
+    display: flex;
+   justify-content: space-evenly;
     border-radius: 10px;
     flex-direction: row;
     margin-top: 50px;
     align-items: end;
-    padding-left: 20px;
+    
+   
   
   }
   .drinks{
-    color: #FFFF99;
+    color:#FFD700;
     font-size: x-large;
+    background-color: black;
+    border-radius: 20px;
+    height: 80px;
+    width: 200px;
+    font-weight: 800;   
   }
   button{
-    background-color: #FFFF99;
+    background-color: #FFD700;;
     height: 40px;
     font-family: cursive;
     border-radius: 20px;
-  }
+    margin-left: 40px;
+ }
   button:hover{
     background-color:darkslateblue;
   }
-  .dealersChoice{
+  .dealersChoice {
     font-size: x-large;
- 
     grid-area: 3/1/4/2;
-    
+    animation: sparkle 2s infinite;
 }
+label{
+    width:0;
+}
+#ingredientSelect{
+    width: 100px;
+    margin-left: 60px;
+    background-color: pink;
+}
+
+
+
+
+@keyframes sparkle {
+    0% {
+        color: rgb(110, 7, 58);
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    50% {
+        color: #6e0b5f;
+        text-shadow: none;
+    }
+    100% {
+        color: rgb(20, 9, 91);
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+}
+
     
 .feelingLucky {
-    color: #FFFF99;
+    color:rgb(243, 27, 243);
     grid-area: 3/1/4/2;
     margin-top: 55px;
 }
+#possibleDrinks{
+    color: #FFA500;
+}
+a{
+    color:#FFA500;
+}
+.arrow{
+    color:#FFA500;
+}
 
 
 
+.header1,
+.header2,
+.header3,
+.header4,
+.header5,
+.header6,
+.header7,
+.header8,
+.header9,
+.header10,
+.header11,
+.header12,
+.header13 {
+    font-size: 5em;
+    text-align: center;
+    animation: sparkle 4s infinite; /* Add sparkle animation */
+}
 
+@keyframes sparkle {
+    0% {
+        color: hotpink;
+        text-shadow: 0 0 10px #710e1b, 0 0 10px #710e1b, 0 0 10px#710e1b;
+    }
+    100% {
+        color: fuchsia;
+        text-shadow: none;
+    }
+    50% {
+        color: deeppink;
+        text-shadow: 0 0 10px #FFFF99, 0 0 10px#FFFF99, 0 0 10px #FFFF99;
+    }
+}
 
-  .header1,
-  .header2,
-  .header3,
-  .header4,
-  .header5,
-  .header6,
-  .header7,
-  .header8,
-  .header9,
-  .header10,
-  .header11,
-  .header12,
-  .header13 {
-    font-size: 5em; 
-    text-align: center; 
-  }
-  
   .header1 {
     color: #FF5733; 
     

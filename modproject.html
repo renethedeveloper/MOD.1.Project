@@ -31,13 +31,13 @@
         </header>
 
         <div class="container">
-            <h3>Don't know what to make? Make a list of ingredients you have and submit. Let "Dealer's Choice" give you some ideas!</h3>
+            <h2>Don't know what to make? Make a list of ingredients you have and submit. Let "Dealer's Choice" give you some ideas!</h2>
             <form>  
                 <label>Ingredients</label>
                 <br>
                 
-                    <select id="ingredientSelect">
-    <option value="">Select an ingredient</option>
+                 <div class="custom-select" custom select>   <select id="ingredientSelect">
+    <option value="">Ingredients</option>
     <option value="Agave Nectar">Agave Nectar</option>
     <option value="Amaretto">Amaretto</option>
     <option value="Angostura Bitters">Angostura Bitters</option>
@@ -108,22 +108,29 @@
     <option value="White Creme de Cacao">White Creme de Cacao</option>
     <option value="White Rum">White Rum</option>
     <option value="White Tequila">White Tequila</option>
-</select>
+</select></div>
 
                  
                    
                 
                   
                 <button>Submit</button>
-                <button class="clear">Clear</button>
+                
             </form> 
+            <button class="clear">Clear</button>
         </div>
         
         
-        <h2 class="feelingLucky">Feeling lucky? Hit Dealer's Choice for a random drink suggestion!</h2>
+        <h2 class="feelingLucky">Feeling lucky? Hit Dealer's Choice <span class="arrow">&#x2191;</span>  for a random drink suggestion!</h2>
         <button class="dealersChoice">Dealer's Choice</button>
+        <div listDiv><h3 class="listTitle">This should not disappear.</h3>
+            <div class="ingredientList">testing
+
+            </div>
         
-        <div class="ingredientList">Ingredients list.</div>
+
+
+        </div>
         <div class="drinks">Cocktails you can make!
             <ul id="possibleDrinks"></ul>
             

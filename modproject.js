@@ -5,6 +5,8 @@ const inputFromOption = document.querySelector("select");
 const ingredientList = document.querySelector(".ingredientList");
 const possibleDrinksList = document.querySelector("#possibleDrinks");
 const clearButton = document.querySelector(".clear");
+const feelingLucky = document.querySelector(".feelingLucky")
+const dealersChoice = document.querySelector(".dealersChoice")
 
 
 
@@ -109,6 +111,52 @@ submit.addEventListener("click", function (e) {
         }
     }
 });
+
+
+
+
+dealersChoice.addEventListener("click", function (e) {
+    e.preventDefault();
+    let getRandomIndex = (array) => {
+        let randomIndex = Math.floor(Math.random() * array.length);
+        return randomIndex;
+    }
+
+    let cocktailIndex = getRandomIndex(classicCocktails);
+    let randomCocktail = classicCocktails[cocktailIndex];
+   console.log(randomCocktail)
+  
+    possibleDrinksList.innerHTML = '';
+
+    const drinkItem = document.createElement("li");
+    const drinkLink = document.createElement("a");
+    drinkLink.textContent = randomCocktail.name;
+    drinkLink.target = "_blank";
+    drinkItem.style.color = "hotPink";
+
+    const drinkURL = drinkURLs[randomCocktail.name];
+    if (drinkURL) {
+        drinkLink.href = drinkURL;
+        drinkItem.appendChild(drinkLink);
+        possibleDrinksList.appendChild(drinkItem);
+    } else {
+        drinkItem.textContent = randomCocktail.name;
+        possibleDrinksList.appendChild(drinkItem);
+    }
+    
+});
+
+clearButton.addEventListener("click", function(e) {
+    e.preventDefault;
+    possibleDrinksList.innerHTML="";
+    ingredientList.innerHTML = ""; 
+    ingredientArray = [];
+})
+    
+
+
+
+
 
 
 
