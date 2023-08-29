@@ -58,11 +58,9 @@ const drinkURLs = {
     'Tequila Soda': 'https://example.com/tequila-soda',
     'Vodka Soda': 'https://example.com/vodka-soda',
     'Whiskey Soda': 'https://example.com/whiskey-soda',
-    'Scotch and Soda': 'https://example.com/scotch-and-soda',
     'Campari Soda': 'https://example.com/campari-soda',
     'Aperol Spritz': 'https://example.com/aperol-spritz',
 };
-
 
 
 submit.addEventListener("click", function (e) {
@@ -91,27 +89,26 @@ submit.addEventListener("click", function (e) {
         }
     }
 
-    possibleDrinksList.innerHTML = ''; // Clear the possible drinks list
+    possibleDrinksList.innerHTML = '';
 
     for (const drinkName of cocktailsThatYouCanMake) {
-        if (!addedDrinks.includes(drinkName)) {
-            const drinkURL = drinkURLs[drinkName];
-            if (drinkURL) {
-                const drinkItem = document.createElement("li");
-                const drinkLink = document.createElement("a");
-                drinkLink.textContent = drinkName;
-                drinkLink.href = drinkURL;
-                drinkLink.target = "_blank";
-                drinkItem.appendChild(drinkLink);
-                possibleDrinksList.appendChild(drinkItem);
-                drinkItem.style.color = "hotPink";
-                addedDrinks.push(drinkName);
-            }
-            
+        const drinkURL = drinkURLs[drinkName];
+        const drinkItem = document.createElement("li");
+        const drinkLink = document.createElement("a");
+        drinkLink.textContent = drinkName;
+        drinkLink.target = "_blank";
+        drinkItem.style.color = "hotPink";
+
+        if (drinkURL) {
+            drinkLink.href = drinkURL;
+            drinkItem.appendChild(drinkLink);
+            possibleDrinksList.appendChild(drinkItem);
+        } else {
+            drinkItem.textContent = drinkName;
+            possibleDrinksList.appendChild(drinkItem);
         }
     }
 });
-
 
 
 
