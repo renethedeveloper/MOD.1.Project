@@ -1,0 +1,137 @@
+* {
+   
+    z-index: 2;
+    
+   
+  }
+  body{
+    width: 100vw;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/003/381/359/original/cocktail-neon-sign-glowing-neon-signboard-illustration-vector.jpg);
+    background-size: cover;
+    height: 100vh;
+   
+  }
+  .gridContainer{
+    display: grid;
+    grid-template-columns:  300px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .ingredientList{
+    color: lightpink;
+    grid-column: 2;
+    margin-right: 40px;
+    font-size: x-large;
+    margin-left: 100px;
+
+    
+   
+  }
+  h3{
+    margin-left: 40px;
+    color: lightpink    ;
+  }
+  .header{
+    display: flex;
+    grid-column: span 3;
+    justify-content: space-around;
+    align-items: center;
+    background-color: 121212;
+
+    height: 300px;
+    width: 80%;
+    margin-left: 100px;
+  }
+  form{
+   
+    justify-content: space-between;
+    border-radius: 10px;
+    flex-direction: row;
+    margin-top: 50px;
+    align-items: end;
+    padding-left: 20px;
+  
+  }
+  .drinks{
+    color: lightpink;
+    font-size: x-large;
+  }
+  button{
+    background-color: lightpink;
+    height: 40px;
+    font-family: cursive;
+    border-radius: 20px;
+  }
+  button:hover{
+    background-color:darkslateblue;
+  }
+  .header1,
+  .header2,
+  .header3,
+  .header4,
+  .header5,
+  .header6,
+  .header7,
+  .header8,
+  .header9,
+  .header10,
+  .header11,
+  .header12,
+  .header13 {
+    font-size: 5em; 
+    text-align: center; 
+  }
+  
+  .header1 {
+    color: #FF5733; 
+    
+  }
+  
+  .header2 {
+    color: #8A2BE2; /* Blue Violet */
+  }
+  
+  .header3 {
+    color: #FFD700; /* Gold */
+  }
+  
+  .header4 {
+    color: #00CED1; /* Dark Turquoise */
+  }
+  
+  .header5 {
+    color: #FF1493; /* Deep Pink */
+  }
+  
+  .header6 {
+    color: #32CD32; /* Lime Green */
+  }
+  
+  .header7 {
+    color: #FF4500; /* Orange Red */
+  }
+  
+  .header8 {
+    color: #9932CC; /* Dark Orchid */
+  }
+  
+  .header9 {
+    color: #20B2AA; /* Light Sea Green */
+  }
+  
+  .header10 {
+    color: #FF6347; /* Tomato */
+  }
+  
+  .header11 {
+    color: #00FFFF; /* Cyan */
+  }
+  
+  .header12 {
+    color: #FFA500; /* Orange */
+  }
+  
+  .header13 {
+    color: #9370DB; /* Medium Purple */
+  }
+
+
