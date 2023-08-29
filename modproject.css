@@ -1,6 +1,6 @@
 * {
    
-    z-index: 2;
+  
     
    
   }
@@ -17,7 +17,7 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
   .ingredientList{
-    color: lightpink;
+    color: #FFFF99;
     grid-column: 2;
     margin-right: 40px;
     font-size: x-large;
@@ -28,7 +28,7 @@
   }
   h3{
     margin-left: 40px;
-    color: lightpink    ;
+    color: #FFFF99 ;
   }
   .header{
     display: flex;
@@ -52,11 +52,11 @@
   
   }
   .drinks{
-    color: lightpink;
+    color: #FFFF99;
     font-size: x-large;
   }
   button{
-    background-color: lightpink;
+    background-color: #FFFF99;
     height: 40px;
     font-family: cursive;
     border-radius: 20px;
@@ -64,6 +64,23 @@
   button:hover{
     background-color:darkslateblue;
   }
+  .dealersChoice{
+    font-size: x-large;
+ 
+    grid-area: 3/1/4/2;
+    
+}
+    
+.feelingLucky {
+    color: #FFFF99;
+    grid-area: 3/1/4/2;
+    margin-top: 55px;
+}
+
+
+
+
+
   .header1,
   .header2,
   .header3,
