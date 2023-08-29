@@ -12,54 +12,105 @@ let ingredientArray = [];
 const cocktailsThatYouCanMake = [];
 const addedDrinks = [];
 
+const drinkURLs = {
+    'Gin Martini': 'https://example.com/gin-martini',
+    'Vodka Martini': 'https://example.com/vodka-martini',
+    'Mojito': 'https://example.com/mojito',
+    'Margarita': 'https://example.com/margarita',
+    'Old Fashioned': 'https://example.com/old-fashioned',
+    'Daiquiri': 'https://example.com/daiquiri',
+    'Strawberry Margarita': 'https://example.com/strawberry-margarita',
+    'Bees Knees': 'https://example.com/bees-knees',
+    'Espresso Martini': 'https://example.com/espresso-martini',
+    'Manhattan': 'https://example.com/manhattan',
+    'Whiskey Ginger': 'https://example.com/whiskey-ginger',
+    'Screwdriver': 'https://example.com/screwdriver',
+    'Gimlet': 'https://example.com/gimlet',
+    'Godfather': 'https://example.com/godfather',
+    'Corpse Reviver': 'https://example.com/corpse-reviver',
+    'Penicillin': 'https://example.com/penicillin',
+    'Derby': 'https://example.com/derby',
+    "Lion's Tail": 'https://example.com/lions-tail',
+    'Old Cuban': 'https://example.com/old-cuban',
+    'Preakness Cocktail': 'https://example.com/preakness-cocktail',
+    'Fourth Regiment': 'https://example.com/fourth-regiment',
+    'Scofflaw': 'https://example.com/scofflaw',
+    'Martinez': 'https://example.com/martinez',
+    'Sidecar': 'https://example.com/sidecar',
+    'White Russian': 'https://example.com/white-russian',
+    'Cosmopolitan': 'https://example.com/cosmopolitan',
+    'Negroni': 'https://example.com/negroni',
+    'Tom Collins': 'https://example.com/tom-collins',
+    'Tequila Sunrise': 'https://example.com/tequila-sunrise',
+    'Harvey Wallbanger': 'https://example.com/harvey-wallbanger',
+    'Brandy Alexander': 'https://example.com/brandy-alexander',
+    'Piña Colada': 'https://example.com/pina-colada',
+    'Mai Tai': 'https://example.com/mai-tai',
+    'Rob Roy': 'https://example.com/rob-roy',
+    'Singapore Sling': 'https://example.com/singapore-sling',
+    'Zombie': 'https://example.com/zombie',
+    'Sex on the Beach': 'https://example.com/sex-on-the-beach',
+    'Blue Lagoon': 'https://example.com/blue-lagoon',
+    'Sea Breeze': 'https://example.com/sea-breeze',
+    'Mimosa': 'https://example.com/mimosa',
+    'Black Russian': 'https://example.com/black-russian',
+    'Kahlua and Soda': 'https://example.com/kahlua-and-soda',
+    'Tequila Soda': 'https://example.com/tequila-soda',
+    'Vodka Soda': 'https://example.com/vodka-soda',
+    'Whiskey Soda': 'https://example.com/whiskey-soda',
+    'Scotch and Soda': 'https://example.com/scotch-and-soda',
+    'Campari Soda': 'https://example.com/campari-soda',
+    'Aperol Spritz': 'https://example.com/aperol-spritz',
+};
+
+
 
 submit.addEventListener("click", function (e) {
     e.preventDefault();
 
-
     const ingredientValue = inputFromOption.value;
 
     if (!ingredientArray.includes(ingredientValue)) {
-
         const ingredient = document.createElement("li");
-
         ingredient.textContent = ingredientValue;
-
         ingredientList.appendChild(ingredient);
-
         ingredientArray.push(ingredientValue);
-
         console.log(ingredientArray);
+    }
 
+    cocktailsThatYouCanMake.length = 0; // Clear the array
 
+    for (let cocktail of classicCocktails) {
+        const cocktailIngredients = cocktail.ingredients;
+        const hasAllIngredients = cocktailIngredients.every(ingredient =>
+            ingredientArray.includes(ingredient)
+        );
 
-        for (let cocktail of classicCocktails) {
-
-            const cocktailIngredients = cocktail.ingredients;
-
-            const hasAllIngredients = cocktailIngredients.every(ingredient =>
-                ingredientArray.includes(ingredient)
-            );
-
-            if (hasAllIngredients) {
-                cocktailsThatYouCanMake.push(cocktail.name);
-            }
+        if (hasAllIngredients) {
+            cocktailsThatYouCanMake.push(cocktail.name);
         }
+    }
 
+    possibleDrinksList.innerHTML = ''; // Clear the possible drinks list
 
-        for (const drinkName of cocktailsThatYouCanMake) {
-            if (!addedDrinks.includes(drinkName)) {
+    for (const drinkName of cocktailsThatYouCanMake) {
+        if (!addedDrinks.includes(drinkName)) {
+            const drinkURL = drinkURLs[drinkName];
+            if (drinkURL) {
                 const drinkItem = document.createElement("li");
-                drinkItem.textContent = drinkName;
+                const drinkLink = document.createElement("a");
+                drinkLink.textContent = drinkName;
+                drinkLink.href = drinkURL;
+                drinkLink.target = "_blank";
+                drinkItem.appendChild(drinkLink);
                 possibleDrinksList.appendChild(drinkItem);
                 drinkItem.style.color = "hotPink";
                 addedDrinks.push(drinkName);
             }
-        }}
-    });
-
-
-
+            
+        }
+    }
+});
 
 
 
@@ -263,6 +314,8 @@ const classicCocktails = [
     },
 
 ];
+
+
 
 
 
