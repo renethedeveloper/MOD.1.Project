@@ -1,9 +1,4 @@
-* {
-   
-  
-    
-   
-  }
+
   body{
     width: 100vw;
     background-image: url(https://images2.alphacoders.com/848/848563.jpg);
@@ -14,10 +9,10 @@
   .gridContainer{
     display: grid;
     grid-template-columns:  300px 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr;
   }
   .ingredientList{
-    background-color: black;
+    background-color: #1218;
     border-radius: 10px;
     color: #FFD700;
     grid-column: 2;
@@ -33,14 +28,18 @@
 .listTitle{
     height: 20px;
     display: flex;
-    color:yellow;
+    color:gold;
     margin-left: 70px;
+    grid-column: 2/3;
+    font-size: 30px;
+    margin-top: 0;
 }
-  h2{
-    margin-left: 40px;
-    color: rgb(243, 27, 243);
-    background-color: black;
+  p{
+    color: gold;
+    background-color: #1219;
     border-radius: 15px;
+    margin-left: 40px;
+    
     
   }
   .header{
@@ -50,7 +49,7 @@
     align-items: center;
     background-color: 121212;
 
-    height: 300px;
+    height: 200px;
     width: 80%;
     margin-left: 100px;
   }
@@ -66,11 +65,14 @@
   
   }
   .drinks{
+    display: flex;
+    grid-column: 3;
+    grid-row: 2;
     color:#FFD700;
     font-size: x-large;
-    background-color: black;
+    background-color: #1217;
     border-radius: 20px;
-    height: 80px;
+    height: 300px;
     width: 200px;
     font-weight: 800;   
   }
@@ -85,6 +87,7 @@
     background-color:darkslateblue;
   }
   .dealersChoice {
+    margin-top: 50px;
     font-size: x-large;
     grid-area: 3/1/4/2;
     animation: sparkle 2s infinite;
@@ -97,7 +100,35 @@ label{
     margin-left: 60px;
     background-color: pink;
 }
+.submit{
+  display: none;
+}
+.clear{
+  width: 80px;
+}
+.inputField{
+  display: flex;
+}
+.feelingLucky {
+  color: fuchsia;
+  background-color: #1219;
+  grid-area: 3/1/4/2;
+  font-size: x-large;
 
+}
+#possibleDrinks{
+  color: #FFA500;
+}
+a{
+  color:#FFA500;
+}
+.arrow{
+  color:#FFA500;
+}
+.inputField{
+margin-left: 60px;
+margin-top: 50px;
+}
 
 
 
@@ -117,21 +148,6 @@ label{
 }
 
     
-.feelingLucky {
-    color:rgb(243, 27, 243);
-    grid-area: 3/1/4/2;
-    margin-top: 55px;
-}
-#possibleDrinks{
-    color: #FFA500;
-}
-a{
-    color:#FFA500;
-}
-.arrow{
-    color:#FFA500;
-}
-
 
 
 .header1,
@@ -147,8 +163,8 @@ a{
 .header11,
 .header12,
 .header13 {
-    font-size: 5em;
-    text-align: center;
+    font-size: 4em;
+    text-align:start;
     animation: sparkle 4s infinite; /* Add sparkle animation */
 }
 
