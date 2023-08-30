@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODPROJECTONE</title>
     <link rel="stylesheet" href="modproject.css">
+
+   
+
 </head>
 <body>
     <div class="gridContainer">
@@ -30,33 +33,33 @@
             <h1 class="header13">E</h1>
         </header>
         <div class="container">
-
+         
             <p>Don't know what to make? Make a list of ingredients you have and submit. Let "Dealer's Choice" give you some ideas!</p>
                 
         
              
                     <input type="text" class="inputField" placeholder="Ingredients">
-                    <button class="clear">Clear</button>
+                   
                   
-                    <button class="dealersChoice">Dealer's Choice</button>
+                    <button id="dealersChoiceButton">Dealer's Choice</button>
+
+                    <button class="clear">Clear</button>
+
                     <div class="feelingLucky">Feeling lucky? Hit the Dealer's Choice button <span class="arrow">&#x2191;</span>  for a random drink suggestion!</div>
                    
                   
                      </div>
-    
-                     
-                       
                     
-         
-               
-
-            
-                     <div>
+    
+                     <div class="midSection">
+                        
                      <h2 class="listTitle">Ingredients:</h2>
-            <div class="ingredientList">
+                     <div class="ingredientList">
 
-            </div>
+                     </div>
+            
         </div>
+        
              
         <div class="drinks">Cocktails you can make!
             <ul id="possibleDrinks"></ul>
@@ -78,7 +81,7 @@
 
       
     </div>
-    <button id="playAudioButton">Play Audio</button>
+    <button>Play Audio</button>
     <audio id="backgroundAudio" loop>
         <source src="https://ia903203.us.archive.org/0/items/04-all-blues-11.35/02%20-%20Freddie%20Freeloader%20%5B9.49%5D.mp3" type="audio/mpeg">
         Your browser does not support the audio element.

@@ -1,14 +1,13 @@
 
 const header = document.querySelector(".header");
-const submit = document.querySelector("button");
 const ingredientInput = document.querySelector(".inputField")
 const ingredientList = document.querySelector(".ingredientList");
 const possibleDrinksList = document.querySelector("#possibleDrinks");
-const clearButton = document.querySelector(".clear");
 const feelingLucky = document.querySelector(".feelingLucky")
-const dealersChoice = document.querySelector(".dealersChoice")
+const dealersChoice = document.getElementById("dealersChoiceButton")
 const backgroundAudio = document.getElementById("backgroundAudio");
 const playAudioButton = document.getElementById("playAudioButton");
+const clearbutton = document.querySelector(".clear")
 
 
 
@@ -262,20 +261,19 @@ const classicCocktails = [
 
 
 
-
-ingredientInput.addEventListener("keydown", function (event) {
-
-    if(event.key === "Enter" && ingredientInput.value.trim() !== "") {
-       const ingredientValue = ingredientInput.value.toLowerCase()
+ingredientInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter" && ingredientInput.value.trim() !== "") {
+        const ingredientValue = ingredientInput.value.toLowerCase();
         if (!ingredientArray.includes(ingredientValue)) {
             const ingredient = document.createElement("li");
             ingredient.textContent = ingredientValue;
             ingredientList.appendChild(ingredient);
             ingredientArray.push(ingredientValue);
-           console.log(ingredientArray);
-              }
-       
-        cocktailsThatYouCanMake.length = 0; 
+            ingredientInput.value = "";
+            console.log(ingredientArray);
+        }
+
+        cocktailsThatYouCanMake.length = 0;
         
 
         for (let cocktail of classicCocktails) {
@@ -361,13 +359,6 @@ dealersChoice.addEventListener("click", function (e) {
     }
 });
 
-clearButton.addEventListener("click", function(e) {
-    e.preventDefault(); 
-    possibleDrinksList.innerHTML = "";
-    ingredientList.innerHTML = ""; 
-    ingredientArray = [];
-});
-
 
 
 
@@ -378,9 +369,17 @@ ingredientInput.addEventListener("keyup", function(e) {
 })
 
 
-
+// plays audio
 playAudioButton.addEventListener("click", function () {
     backgroundAudio.play();
+});
+
+// suppose to clear the selection
+clearButton.addEventListener("click", function(e) {
+    e.preventDefault(); 
+    possibleDrinksList.innerHTML = "";
+    ingredientList.innerHTML = ""; 
+    ingredientArray = [];
 });
 
 
