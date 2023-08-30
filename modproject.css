@@ -13,9 +13,6 @@
     grid-template-columns:  300px 1fr 1fr;
     grid-template-rows: 150px 1fr 1fr;
   }
-  .container{
-    margin-top: 100px;
-  }
   .ingredientList{
     background-color: #1218;
     border-radius: 10px;
@@ -37,7 +34,7 @@
     margin-left: 70px;
     grid-column: 2/3;
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 0;
 }
   p{
     color: gold;
@@ -96,17 +93,25 @@
   button:hover{
     background-color:darkslateblue;
   }
-  
-
-
+  .dealersChoice {
+    margin-top: 50px;
+    font-size: x-large;
+    grid-area: 3/1/4/2;
+    animation: sparkle 2s infinite;
+}
+label{
+    width:0;
+}
+#ingredientSelect{
+    width: 100px;
+    margin-left: 60px;
+    background-color: pink;
+}
 .submit{
   display: none;
 }
 .clear{
   width: 80px;
-  margin-top: 40px;
-  margin-left: 80px;
-  
 }
 .inputField{
   display: flex;
@@ -135,7 +140,7 @@ margin-top: 50px;
   margin-left: 100px;
 }
 #dealersChoiceButton{
-  back
+  background-color: #9370DB;
 }
 
 
