@@ -7,7 +7,7 @@ const feelingLucky = document.querySelector(".feelingLucky")
 const dealersChoice = document.getElementById("dealersChoiceButton")
 const backgroundAudio = document.getElementById("backgroundAudio");
 const playAudioButton = document.getElementById("playAudioButton");
-const clearbutton = document.querySelector(".clear")
+const clearButton = document.querySelector(".clear")
 
 
 
@@ -254,6 +254,46 @@ const classicCocktails = [
     {
         name: 'Zombie',
         ingredients: ['Light Rum', 'Dark Rum', 'Apricot Brandy', 'Lime Juice', 'Pineapple Juice',]
+    },
+    {
+        name: 'Long Island Iced Tea',
+        ingredients: ['Vodka', 'Rum', 'Gin', 'Tequila', 'Triple Sec', 'Lemon Juice', 'Simple Syrup', 'Coke']
+    },
+    {
+        name: 'Mai Tai',
+        ingredients: ['White Rum', 'Dark Rum', 'Orange Curacao', 'Orgeat Syrup', 'Lime Juice', 'Pineapple Juice']
+    },
+    {
+        name: 'Pina Colada',
+        ingredients: ['White Rum', 'Coconut Cream', 'Pineapple Juice']
+    },
+    {
+        name: 'White Russian',
+        ingredients: ['Vodka', 'Coffee Liqueur', 'Cream']
+    },
+    {
+        name: 'Mai Tai',
+        ingredients: ['Light Rum', 'Dark Rum', 'Lime Juice', 'Orgeat Syrup', 'Orange Curacao']
+    },
+    {
+        name: 'Sangria',
+        ingredients: ['Red Wine', 'Brandy', 'Orange Juice', 'Simple Syrup', 'Soda Water', 'Fruits']
+    },
+    {
+        name: 'Mojito',
+        ingredients: ['White Rum', 'Mint Leaves', 'Lime Juice', 'Simple Syrup', 'Soda Water']
+    },
+    {
+        name: 'Dark and Stormy',
+        ingredients: ['Dark Rum', 'Ginger Beer', 'Lime']
+    },
+    {
+        name: 'Amaretto Sour',
+        ingredients: ['Amaretto', 'Lemon Juice', 'Simple Syrup']
+    },
+    {
+        name: 'Mudslide',
+        ingredients: ['Vodka', 'Coffee Liqueur', 'Irish Cream', 'Cream']
     },
 ];
 
