@@ -1,16 +1,18 @@
 
-
+    *{
+      font-family: fantasy;
+    }
   
   body{
     width: 100vw;
     background-image: url(https://w0.peakpx.com/wallpaper/37/897/HD-wallpaper-orange-lemon-cocktail-cocktail-champagne-glass-dark-bar-spotlight-chair-orange-zest-lemon.jpg);
-    background-size: cover;
-    height: 100vh;
+    background-size:cover;
+    height: 50vh;
    
   }
   .gridContainer{
     display: grid;
-    grid-template-columns:  300px 1fr 1fr;
+    grid-template-columns:  300px 1fr 300px;
     grid-template-rows: 150px 1fr 1fr;
   }
   .ingredientList{
@@ -102,11 +104,7 @@
 label{
     width:0;
 }
-#ingredientSelect{
-    width: 100px;
-    margin-left: 60px;
-    background-color: pink;
-}
+
 .submit{
   display: none;
 }
@@ -142,7 +140,7 @@ margin-top: 50px;
   margin-left: 100px;
 }
 #dealersChoiceButton{
-  background-color: #9370DB;
+  background-color: darkslateblue;
   color: gold;
   font-size: x-large;
   margin:30px;

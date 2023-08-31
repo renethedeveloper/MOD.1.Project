@@ -17,59 +17,58 @@ const cocktailsThatYouCanMake = [];
 const addedDrinks = [];
 
 const drinkURLs = {
-    'Gin Martini': 'https://example.com/gin-martini',
-    'Vodka Martini': 'https://example.com/vodka-martini',
-    'Mojito': 'https://example.com/mojito',
-    'Margarita': 'https://example.com/margarita',
-    'Old Fashioned': 'https://example.com/old-fashioned',
-    'Daiquiri': 'https://example.com/daiquiri',
-    'Strawberry Margarita': 'https://example.com/strawberry-margarita',
-    'Bees Knees': 'https://example.com/bees-knees',
-    'Espresso Martini': 'https://example.com/espresso-martini',
-    'Manhattan': 'https://example.com/manhattan',
-    'Whiskey Ginger': 'https://example.com/whiskey-ginger',
-    'Screwdriver': 'https://example.com/screwdriver',
-    'Gimlet': 'https://example.com/gimlet',
-    'Godfather': 'https://example.com/godfather',
-    'Corpse Reviver': 'https://example.com/corpse-reviver',
-    'Penicillin': 'https://example.com/penicillin',
-    'Derby': 'https://example.com/derby',
-    "Lion's Tail": 'https://example.com/lions-tail',
-    'Old Cuban': 'https://example.com/old-cuban',
-    'Preakness Cocktail': 'https://example.com/preakness-cocktail',
-    'Fourth Regiment': 'https://example.com/fourth-regiment',
-    'Scofflaw': 'https://example.com/scofflaw',
-    'Martinez': 'https://example.com/martinez',
-    'Sidecar': 'https://example.com/sidecar',
-    'White Russian': 'https://example.com/white-russian',
-    'Cosmopolitan': 'https://example.com/cosmopolitan',
-    'Negroni': 'https://example.com/negroni',
-    'Tom Collins': 'https://example.com/tom-collins',
-    'Tequila Sunrise': 'https://example.com/tequila-sunrise',
-    'Harvey Wallbanger': 'https://example.com/harvey-wallbanger',
-    'Brandy Alexander': 'https://example.com/brandy-alexander',
-    'Piña Colada': 'https://example.com/pina-colada',
-    'Mai Tai': 'https://example.com/mai-tai',
-    'Rob Roy': 'https://example.com/rob-roy',
-    'Singapore Sling': 'https://example.com/singapore-sling',
-    'Zombie': 'https://example.com/zombie',
-    'Sex on the Beach': 'https://example.com/sex-on-the-beach',
-    'Blue Lagoon': 'https://example.com/blue-lagoon',
-    'Sea Breeze': 'https://example.com/sea-breeze',
-    'Mimosa': 'https://example.com/mimosa',
-    'Black Russian': 'https://example.com/black-russian',
-    'Kahlua and Soda': 'https://example.com/kahlua-and-soda',
-    'Tequila Soda': 'https://example.com/tequila-soda',
-    'Vodka Soda': 'https://example.com/vodka-soda',
-    'Whiskey Soda': 'https://example.com/whiskey-soda',
-    'Campari Soda': 'https://example.com/campari-soda',
-    'Aperol Spritz': 'https://example.com/aperol-spritz',
+    'Gin Martini': 'https://www.thespruceeats.com/classic-gin-martini-recipe-759739',
+    'Vodka Martini': 'https://www.thespruceeats.com/vodka-martini-recipe-759289',
+    'Mojito': 'https://www.loveandlemons.com/mojito-recipe/',
+    'Margarita': 'https://www.liquor.com/recipes/margarita/',
+    'Old Fashioned': 'https://www.liquor.com/recipes/old-fashioned/',
+    'Daiquiri': 'https://www.liquor.com/recipes/classic-daiquiri/',
+    'Strawberry Margarita': 'https://www.allrecipes.com/recipe/232932/fresh-strawberry-margaritas/',
+    'Bees Knees': 'https://www.liquor.com/recipes/bees-knees/',
+    'Espresso Martini': 'https://www.liquor.com/recipes/espresso-martini/',
+    'Manhattan': 'https://www.liquor.com/recipes/manhattan-2/',
+    'Whiskey Ginger': 'https://www.thespruceeats.com/whiskey-ginger-recipe-760169',
+    'Screwdriver': 'https://www.liquor.com/recipes/screwdriver/',
+    'Gimlet': 'https://www.liquor.com/recipes/gimlet/',
+    'Godfather': 'https://www.liquor.com/recipes/godfather/',
+    'Corpse Reviver': 'https://www.liquor.com/recipes/corpse-reviver-2/',
+    'Penicillin': 'https://www.liquor.com/recipes/penicillin/',
+    'Derby': 'https://www.liquor.com/recipes/derby-cocktail/',
+    "Lion's Tail": 'https://www.liquor.com/recipes/lions-tail/',
+    'Old Cuban': 'https://www.liquor.com/recipes/old-cuban/',
+    'Preakness Cocktail': 'https://www.liquor.com/recipes/preakness-cocktail/',
+    'Fourth Regiment': 'https://imbibemagazine.com/recipe/fourth-regiment-cocktail/',
+    'Scofflaw': 'https://www.liquor.com/recipes/scofflaw/',
+    'Martinez': 'https://www.liquor.com/recipes/martinez/',
+    'Sidecar': 'https://www.thespruceeats.com/sidecar-cocktail-recipe-759314',
+    'White Russian': 'https://www.liquor.com/recipes/white-russian/',
+    'Cosmopolitan': 'https://www.allrecipes.com/recipe/221891/cosmopolitan-cocktail/',
+    'Negroni': 'https://www.thespruceeats.com/negroni-cocktail-recipe-759327',
+    'Tom Collins': 'https://www.liquor.com/recipes/tom-collins-2/',
+    'Tequila Sunrise': 'https://www.thespruceeats.com/tequila-sunrise-recipe-759450',
+    'Harvey Wallbanger': 'https://www.liquor.com/recipes/harvey-wallbanger/',
+    'Brandy Alexander': 'https://www.liquor.com/recipes/brandy-alexander/',
+    'Pina Colada': 'https://www.crazyforcrust.com/easy-pina-colada-recipe/',
+    'Mai Tai': 'https://www.thespruceeats.com/mai-tai-cocktail-recipe-759275',
+    'Rob Roy': 'https://www.liquor.com/recipes/rob-roy/',
+    'Singapore Sling': 'https://www.liquor.com/recipes/singapore-sling/',
+    'Zombie': 'https://www.liquor.com/recipes/zombie/',
+    'Sex on the Beach': 'https://www.thespruceeats.com/sex-on-the-beach-recipe-759285',
+    'Blue Lagoon': 'https://www.liquor.com/recipes/blue-lagoon/',
+    'Sea Breeze': 'https://www.thespruceeats.com/sea-breeze-cocktail-recipe-759453',
+    'Mimosa': 'https://www.thespruceeats.com/mimosa-cocktail-recipe-759312',
+    'Black Russian': 'https://www.thespruceeats.com/black-russian-recipe-759313',
+    'Kahlua and Soda': 'https://unsophisticook.com/kahlua-club-soda/',
+    'Tequila Soda': 'https://www.thespruceeats.com/tequila-soda-recipe-759451',
+    'Long Island Iced Tea':'https://www.allrecipes.com/recipe/228491/the-real-long-island-iced-tea/',
+    'Aperol Spritz': 'https://www.thespruceeats.com/aperol-spritz-recipe-759444',
 };
+
 
 const classicCocktails = [
     {
         name: 'Aperol Spritz',
-        ingredients: ['Aperol', 'Prosecco', 'Soda Water', 'Orange Slice']
+        ingredients: ['Aperol', 'Prosecco', 'Soda Water', 'Orange']
     },
     {
         name: 'Bees Knees',
@@ -85,7 +84,7 @@ const classicCocktails = [
     },
     {
         name: 'Brandy Alexander',
-        ingredients: ['Brandy', 'Dark Creme de Cacao', 'Cream', 'Nutmeg']
+        ingredients: ['Brandy', 'Creme de Cacao', 'Cream', 'Nutmeg']
     },
     {
         name: 'Campari Soda',
@@ -93,7 +92,7 @@ const classicCocktails = [
     },
     {
         name: 'Cosmopolitan',
-        ingredients: ['Vodka', 'Cointreau', 'Cranberry Juice', 'Lime Juice']
+        ingredients: ['Vodka', 'Cointreau', 'Cranberry ', 'Lime']
     },
     {
         name: 'Corpse Reviver',
@@ -101,11 +100,11 @@ const classicCocktails = [
     },
     {
         name: 'Daiquiri',
-        ingredients: ['Rum', 'Lime Juice', 'Syrup']
+        ingredients: ['Rum', 'Lime', 'Syrup']
     },
     {
         name: 'Derby',
-        ingredients: ['Bourbon', 'Sweet Vermouth', 'Orange Curacao', 'Orange Bitters']
+        ingredients: ['Bourbon', 'Vermouth', 'Orange Curacao', 'Orange Bitters']
     },
     {
         name: 'Espresso Martini',
@@ -117,11 +116,11 @@ const classicCocktails = [
     },
     {
         name: "Lion's Tail",
-        ingredients: ['Bourbon', 'Allspice Dram', 'Lime Juice', 'Simple Syrup', 'Angostura Bitters']
+        ingredients: ['Bourbon', 'Allspice Dram', 'Lime', 'Sugar', 'Bitters']
     },
     {
         name: 'Gimlet',
-        ingredients: ['Gin', 'Lime Juice', 'Simple Syrup']
+        ingredients: ['Gin', 'Lime', 'Sugar']
     },
     {
         name: 'Godfather',
@@ -133,15 +132,15 @@ const classicCocktails = [
     },
     {
         name: 'Harvey Wallbanger',
-        ingredients: ['Vodka', 'Orange Juice', 'Galliano']
+        ingredients: ['Vodka', 'Orange ', 'Galliano']
     },
     {
         name: 'Kahlua and Soda',
-        ingredients: ['Soda Water', 'Coffee Liqueur']
+        ingredients: ['Soda ', 'Coffee Liqueur']
     },
     {
         name: 'Mai Tai',
-        ingredients: ['Light Rum', 'Dark Rum', 'Lime Juice', 'Orgeat Syrup', 'Orange Curacao']
+        ingredients: [' Rum', 'Dark Rum', 'Lime', 'Orgeat', 'Orange Curacao']
     },
     {
         name: 'Manhattan',
@@ -153,7 +152,7 @@ const classicCocktails = [
     },
     {
         name: 'Martinez',
-        ingredients: ['Gin', 'Sweet Vermouth', 'Maraschino Liqueur', 'Orange Bitters']
+        ingredients: ['Gin', 'Vermouth', 'Maraschino Liqueur', 'Orange Bitters']
     },
     {
         name: 'Mimosa',
@@ -169,7 +168,7 @@ const classicCocktails = [
     },
     {
         name: 'Old Cuban',
-        ingredients: ['Champagne', 'Aged Rum', 'Simple Syrup', 'Angostura Bitters', 'Champagne']
+        ingredients: ['Champagne', ' Rum', 'Sugar', ' Bitters', 'Champagne']
     },
     {
         name: 'Old Fashioned',
@@ -177,43 +176,43 @@ const classicCocktails = [
     },
     {
         name: 'Penicillin',
-        ingredients: ['Scotch', 'Honey Syrup', 'Ginger Syrup', 'Lemon Juice', 'Islay Scotch Float']
+        ingredients: ['Scotch', 'Honey Syrup', 'Ginger ', 'Lemon ', ]
     },
     {
         name: 'Piña Colada',
-        ingredients: ['White Rum', 'Coconut Cream', 'Pineapple Juice']
+        ingredients: ['Rum', 'Coconut Cream', 'Pineapple']
     },
     {
         name: 'Preakness Cocktail',
-        ingredients: ['Rye Whiskey', 'Sweet Vermouth', 'Benedictine', 'Peach Bitters']
+        ingredients: ['Whiskey', 'Vermouth', 'Benedictine', 'Peach Bitters']
     },
     {
         name: 'Rob Roy',
-        ingredients: ['Scotch', 'Sweet Vermouth', 'Angostura Bitters']
+        ingredients: ['Scotch', 'Vermouth', ' Bitters']
     },
     {
         name: 'Scofflaw',
-        ingredients: ['Rye Whiskey', 'Dry Vermouth', 'Lemon Juice', 'Grenadine', 'Orange Bitters']
+        ingredients: ['Rye Whiskey', 'Dry Vermouth', 'Lemon ', 'Grenadine', 'Orange Bitters']
     },
     {
         name: 'Sea Breeze',
-        ingredients: ['Vodka', 'Cranberry Juice', 'Grapefruit Juice']
+        ingredients: ['Vodka', 'Cranberry ', 'Grapefruit ']
     },
     {
         name: 'Sex on the Beach',
-        ingredients: ['Vodka', 'Peach Schnapps', 'Orange Juice', 'Cranberry Juice']
+        ingredients: ['Vodka', 'Peach Schnapps', 'Orange ', 'Cranberry ']
     },
     {
         name: 'Sidecar',
-        ingredients: ['Brandy', 'Triple Sec', 'Lemon Juice']
+        ingredients: ['Brandy', 'Triple Sec', 'Lemon ']
     },
     {
         name: 'Singapore Sling',
-        ingredients: ['Gin', 'Cherry Brandy', 'Cointreau', 'Pineapple Juice', 'Lime Juice', 'Grenadine']
+        ingredients: ['Gin', 'Cherry Brandy', 'Cointreau', 'Pineapple ', 'Lime ', 'Grenadine']
     },
     {
         name: 'Screwdriver',
-        ingredients: ['Vodka', 'Orange Juice']
+        ingredients: ['Vodka', 'Orange ']
     },
     {
         name: 'Strawberry Margarita',
@@ -221,15 +220,15 @@ const classicCocktails = [
     },
     {
         name: 'Tequila Soda',
-        ingredients: ['Soda Water', 'Tequila']
+        ingredients: ['Soda', 'Tequila']
     },
     {
         name: 'Tequila Sunrise',
-        ingredients: ['Tequila', 'Orange Juice', 'Grenadine']
+        ingredients: ['Tequila', 'Orange ', 'Grenadine']
     },
     {
         name: 'Tom Collins',
-        ingredients: ['Gin', 'Lemon Juice', 'Simple Syrup', 'Soda Water']
+        ingredients: ['Gin', 'Lemon ', 'Sugar', 'Soda ']
     },
     {
         name: 'Vodka Martini',
@@ -237,7 +236,7 @@ const classicCocktails = [
     },
     {
         name: 'Vodka Soda',
-        ingredients: ['Soda Water', 'Vodka']
+        ingredients: ['Soda ', 'Vodka']
     },
     {
         name: 'White Russian',
@@ -249,23 +248,23 @@ const classicCocktails = [
     },
     {
         name: 'Whiskey Soda',
-        ingredients: ['Soda Water', 'Whiskey']
+        ingredients: ['Soda ', 'Whiskey']
     },
     {
         name: 'Zombie',
-        ingredients: ['Light Rum', 'Dark Rum', 'Apricot Brandy', 'Lime Juice', 'Pineapple Juice',]
+        ingredients: [' Rum', 'Dark Rum', 'Apricot Brandy', 'Lime ', 'Pineapple ',]
     },
     {
         name: 'Long Island Iced Tea',
-        ingredients: ['Vodka', 'Rum', 'Gin', 'Tequila', 'Triple Sec', 'Lemon Juice', 'Simple Syrup', 'Coke']
+        ingredients: ['Vodka', 'Rum', 'Gin', 'Tequila', 'Triple Sec', 'Lemon ', 'Sugar', 'Coke']
     },
     {
         name: 'Mai Tai',
-        ingredients: ['White Rum', 'Dark Rum', 'Orange Curacao', 'Orgeat Syrup', 'Lime Juice', 'Pineapple Juice']
+        ingredients: [' Rum', 'Dark Rum', 'Orange Curacao', 'Orgeat ', 'Lime ', 'Pineapple ']
     },
     {
         name: 'Pina Colada',
-        ingredients: ['White Rum', 'Coconut Cream', 'Pineapple Juice']
+        ingredients: [' Rum', 'Coconut Cream', 'Pineapple ']
     },
     {
         name: 'White Russian',
@@ -273,27 +272,59 @@ const classicCocktails = [
     },
     {
         name: 'Mai Tai',
-        ingredients: ['Light Rum', 'Dark Rum', 'Lime Juice', 'Orgeat Syrup', 'Orange Curacao']
+        ingredients: [' Rum', 'Dark Rum', 'Lime ', 'Orgeat ', 'Orange Curacao']
     },
     {
         name: 'Sangria',
-        ingredients: ['Red Wine', 'Brandy', 'Orange Juice', 'Simple Syrup', 'Soda Water', 'Fruits']
+        ingredients: ['Red Wine', 'Brandy', 'Orange ', 'Sugar', 'Soda ', 'Fruits']
     },
     {
         name: 'Mojito',
-        ingredients: ['White Rum', 'Mint Leaves', 'Lime Juice', 'Simple Syrup', 'Soda Water']
+        ingredients: [' Rum', 'Mint ', 'Lime ', 'Sugar', 'Soda ']
     },
     {
         name: 'Dark and Stormy',
-        ingredients: ['Dark Rum', 'Ginger Beer', 'Lime']
+        ingredients: [' Rum', 'Ginger Beer', 'Lime']
     },
     {
         name: 'Amaretto Sour',
-        ingredients: ['Amaretto', 'Lemon Juice', 'Simple Syrup']
+        ingredients: ['Amaretto', 'Lemon ', 'Sugar']
     },
     {
         name: 'Mudslide',
         ingredients: ['Vodka', 'Coffee Liqueur', 'Irish Cream', 'Cream']
+    },
+    {
+        name: 'Tipperary',
+        ingredients: ['Chartreuse', 'Irish whiskey', 'vermouth']
+    },
+    {
+        name: 'GreenPoint',
+        ingredients: ['Chartreuse', ' whiskey', 'vermouth']
+    },
+    {
+        name: 'Chartreuse and Root Beer',
+        ingredients: ['Chartreuse', ' root beer',]
+    },
+    {
+        name: 'Vert Chaud',
+        ingredients: ['Chartreuse', ' hot chocolate',]
+    },
+    {
+        name: 'Hanky Panky',
+        ingredients: ['fernet branca', ' gin', 'vermouth','orange']
+    },
+    {
+        name: 'Rosita',
+        ingredients: ['tequila', ' campari', 'dry vermouth','orange']
+    },
+    {
+        name: 'Black Manhattan',
+        ingredients: ['whiskey', ' amaro', 'orange', 'bitters']
+    },
+    {
+        name: 'South Side',
+        ingredients: ['gin', ' mint', 'lemon', 'soda', 'sugar']
     },
 ];
 
