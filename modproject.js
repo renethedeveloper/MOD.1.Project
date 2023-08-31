@@ -73,7 +73,7 @@ const drinkURLs = {
     'Black Manhattan': 'https://www.liquor.com/black-manhattan-cocktail-recipe-5184291',
     'Tipperary': 'https://www.liquor.com/recipes/tipperary/',
     'Rosita': 'https://www.liquor.com/rosita-cocktail-recipe-7487591',
-   'Preakness':' https://www.liquor.com/recipes/preakness/',
+   'Preakness':'https://www.liquor.com/recipes/preakness/',
     'Vert Chaud':'https://tuxedono2.com/verte-chaud-cocktail-recipe',
     'Hanky Panky':'https://www.liquor.com/recipes/hanky-panky/',
     'Tequila Sunrise':'https://www.liquor.com/recipes/tequila-sunrise/',
@@ -354,8 +354,20 @@ ingredientInput.addEventListener("keyup", function (event) {
         if (!ingredientArray.includes(ingredientValue)) {
             const ingredient = document.createElement("li");
             ingredient.textContent = ingredientValue;
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", function () {
+                ingredientList.removeChild(ingredient);
+                ingredientArray = ingredientArray.filter(item => item !== ingredientValue);
+            });
+            
+            ingredient.appendChild(deleteButton);
+            
+            ingredientList.appendChild(ingredient);
             ingredientList.appendChild(ingredient);
             ingredientArray.push(ingredientValue);
+
             ingredientInput.value = "";
             console.log(ingredientArray);
         }
