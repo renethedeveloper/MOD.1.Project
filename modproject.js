@@ -12,9 +12,7 @@ const clearButton = document.querySelector(".clear")
 
 
 
-let ingredientArray = [];
-const cocktailsThatYouCanMake = [];
-const addedDrinks = [];
+
 
 const drinkURLs = {
     'Gin Martini': 'https://www.thespruceeats.com/classic-gin-martini-recipe-759739',
@@ -77,6 +75,8 @@ const drinkURLs = {
     'Vert Chaud':'https://tuxedono2.com/verte-chaud-cocktail-recipe',
     'Hanky Panky':'https://www.liquor.com/recipes/hanky-panky/',
     'Tequila Sunrise':'https://www.liquor.com/recipes/tequila-sunrise/',
+    'Mamie Taylor':'https://www.seriouseats.com/drink-cocktails-mamie-taylor-scotch-spicy-ginger-beer-recipe',
+
 
 };
 
@@ -84,7 +84,7 @@ const drinkURLs = {
 const classicCocktails = [
     {
         name: 'Aperol Spritz',
-        ingredients: ['Aperol', 'Prosecco', 'Soda Water', 'Orange']
+        ingredients: ['Aperol', 'Prosecco', 'Soda', 'Orange']
     },
     {
         name: 'Bees Knees',
@@ -104,7 +104,7 @@ const classicCocktails = [
     },
     {
         name: 'Campari Soda',
-        ingredients: ['Soda Water', 'Campari']
+        ingredients: ['Soda', 'Campari']
     },
     {
         name: 'Cosmopolitan',
@@ -116,7 +116,7 @@ const classicCocktails = [
     },
     {
         name: 'Daiquiri',
-        ingredients: ['Rum', 'Lime', 'Syrup']
+        ingredients: ['Rum','Lime', 'sugar']
     },
     {
         name: 'Derby',
@@ -148,11 +148,11 @@ const classicCocktails = [
     },
     {
         name: 'Harvey Wallbanger',
-        ingredients: ['Vodka', 'Orange ', 'Galliano']
+        ingredients: ['Vodka', 'Orange', 'Galliano']
     },
     {
         name: 'Kahlua and Soda',
-        ingredients: ['Soda ', 'Coffee Liqueur']
+        ingredients: ['Soda', 'Coffee Liqueur']
     },
     {
         name: 'Mai Tai',
@@ -176,7 +176,7 @@ const classicCocktails = [
     },
     {
         name: 'Mojito',
-        ingredients: ['Rum', 'Mint', 'Lime', 'Syrup', 'Soda Water']
+        ingredients: ['Rum', 'Mint', 'Lime', 'Syrup', 'Soda']
     },
     {
         name: 'Negroni',
@@ -184,7 +184,7 @@ const classicCocktails = [
     },
     {
         name: 'Old Cuban',
-        ingredients: ['Champagne', ' Rum', 'Sugar', ' Bitters', 'Champagne']
+        ingredients: ['Champagne', 'Rum', 'Sugar', ' Bitters', 'Champagne']
     },
     {
         name: 'Old Fashioned',
@@ -192,7 +192,7 @@ const classicCocktails = [
     },
     {
         name: 'Penicillin',
-        ingredients: ['Scotch', 'Honey Syrup', 'Ginger ', 'Lemon ', ]
+        ingredients: ['Scotch', 'Honey', 'Ginger', 'Lemon', ]
     },
     {
         name: 'Piña Colada',
@@ -216,7 +216,7 @@ const classicCocktails = [
     },
     {
         name: 'Sex on the Beach',
-        ingredients: ['Vodka', 'Peach Schnapps', 'Orange ', 'Cranberry ']
+        ingredients: ['Vodka', 'Peach Schnapps', 'Orange', 'Cranberry ']
     },
     {
         name: 'Sidecar',
@@ -228,7 +228,7 @@ const classicCocktails = [
     },
     {
         name: 'Screwdriver',
-        ingredients: ['Vodka', 'Orange ']
+        ingredients: ['Vodka', 'Orange']
     },
     {
         name: 'Strawberry Margarita',
@@ -240,11 +240,11 @@ const classicCocktails = [
     },
     {
         name: 'Tequila Sunrise',
-        ingredients: ['Tequila', 'Orange ', 'Grenadine']
+        ingredients: ['Tequila', 'Orange', 'Grenadine']
     },
     {
         name: 'Tom Collins',
-        ingredients: ['Gin', 'Lemon ', 'Sugar', 'Soda ']
+        ingredients: ['Gin', 'Lemon ', 'Sugar', 'Soda']
     },
     {
         name: 'Vodka Martini',
@@ -252,11 +252,7 @@ const classicCocktails = [
     },
     {
         name: 'Vodka Soda',
-        ingredients: ['Soda ', 'Vodka']
-    },
-    {
-        name: 'White Russian',
-        ingredients: ['Vodka', 'Coffee Liqueur', 'Cream']
+        ingredients: ['Soda', 'Vodka']
     },
     {
         name: 'Whiskey Ginger',
@@ -264,23 +260,23 @@ const classicCocktails = [
     },
     {
         name: 'Whiskey Soda',
-        ingredients: ['Soda ', 'Whiskey']
+        ingredients: ['Soda', 'Whiskey']
     },
     {
         name: 'Zombie',
-        ingredients: [' Rum', 'Dark Rum', 'Apricot Brandy', 'Lime ', 'Pineapple ',]
+        ingredients: ['Rum', 'Dark Rum', 'Apricot Brandy', 'Lime ', 'Pineapple']
     },
     {
         name: 'Long Island Iced Tea',
-        ingredients: ['Vodka', 'Rum', 'Gin', 'Tequila', 'Triple Sec', 'Lemon ', 'Sugar', 'Coke']
+        ingredients: ['Vodka', 'Rum', 'Gin', 'Tequila', 'Triple Sec', 'Lemon', 'Sugar', 'Coke']
     },
     {
         name: 'Mai Tai',
-        ingredients: [' Rum', 'Dark Rum', 'Orange Curacao', 'Orgeat ', 'Lime ', 'Pineapple ']
+        ingredients: ['Rum', 'Dark Rum', 'Orange Curacao', 'Orgeat', 'Lime', 'Pineapple ']
     },
     {
         name: 'Pina Colada',
-        ingredients: [' Rum', 'Coconut Cream', 'Pineapple ']
+        ingredients: ['Rum', 'Coconut Cream', 'Pineapple ']
     },
     {
         name: 'White Russian',
@@ -288,23 +284,23 @@ const classicCocktails = [
     },
     {
         name: 'Mai Tai',
-        ingredients: [' Rum', 'Dark Rum', 'Lime ', 'Orgeat ', 'Orange Curacao']
+        ingredients: ['rum', 'Dark Rum', 'Lime ', 'Orgeat ', 'Orange Curacao']
     },
     {
         name: 'Sangria',
-        ingredients: ['Red Wine', 'Brandy', 'Orange ', 'Sugar', 'Soda ', 'Fruits']
+        ingredients: ['Red Wine', 'Brandy', 'Orange', 'Sugar', 'Soda', 'Fruits']
     },
     {
         name: 'Mojito',
-        ingredients: [' Rum', 'Mint ', 'Lime ', 'Sugar', 'Soda ']
+        ingredients: ['Rum', 'Mint ', 'Lime ', 'Sugar', 'Soda']
     },
     {
         name: 'Dark and Stormy',
-        ingredients: [' Rum', 'Ginger Beer', 'Lime']
+        ingredients: ['Rum', 'Ginger Beer', 'Lime']
     },
     {
         name: 'Amaretto Sour',
-        ingredients: ['Amaretto', 'Lemon ', 'Sugar']
+        ingredients: ['Amaretto', 'Lemon', 'Sugar']
     },
     {
         name: 'Mudslide',
@@ -316,7 +312,7 @@ const classicCocktails = [
     },
     {
         name: 'Green Point',
-        ingredients: ['Chartreuse', ' whiskey', 'vermouth']
+        ingredients: ['Chartreuse', 'whiskey', 'vermouth']
     },
     {
         name: 'Chartreuse and Root Beer',
@@ -332,24 +328,34 @@ const classicCocktails = [
     },
     {
         name: 'Rosita',
-        ingredients: ['tequila', ' campari', 'dry vermouth','orange']
+        ingredients: ['tequila', 'campari', 'dry vermouth','orange']
     },
     {
         name: 'Black Manhattan',
-        ingredients: ['whiskey', ' amaro', 'orange', 'bitters']
+        ingredients: ['whiskey', 'amaro', 'orange', 'bitters']
     },
     {
         name: 'South Side',
         ingredients: ['gin', ' mint', 'lemon', 'soda', 'sugar']
     },
+    {
+        name: 'Scotch and Soda',
+        ingredients: ['scotch', 'soda']
+    },
+    {
+        name: 'Mamie Taylor',
+        ingredients: ['scotch', 'ginger beer', 'lime']
+    },
 ];
 
 
+let ingredientArray = [];
+const cocktailsThatYouCanMake = [];
+const addedDrinks = [];
 
 
-
-ingredientInput.addEventListener("keyup", function (event) {
-    if (event.key === "Enter" && ingredientInput.value.trim() !== "") {
+ingredientInput.addEventListener("keyup", function (e) {
+    if (e.key === "Enter" && ingredientInput.value.trim() !== "") {
         const ingredientValue = ingredientInput.value.toLowerCase();
         if (!ingredientArray.includes(ingredientValue)) {
             const ingredient = document.createElement("li");
@@ -363,8 +369,6 @@ ingredientInput.addEventListener("keyup", function (event) {
             });
             
             ingredient.appendChild(deleteButton);
-            
-            ingredientList.appendChild(ingredient);
             ingredientList.appendChild(ingredient);
             ingredientArray.push(ingredientValue);
 
@@ -372,7 +376,7 @@ ingredientInput.addEventListener("keyup", function (event) {
             console.log(ingredientArray);
         }
 
-        cocktailsThatYouCanMake.length = 0;
+            cocktailsThatYouCanMake.length = 0;
         
 
         for (let cocktail of classicCocktails) {
@@ -381,9 +385,10 @@ ingredientInput.addEventListener("keyup", function (event) {
                 ingredientArray.includes(ingredient)
             );
 
-            if (hasAllIngredients) {
-                cocktailsThatYouCanMake.push(cocktail.name);
+            if (hasAllIngredients && !cocktailsThatYouCanMake.includes(cocktail.name)) {
+            cocktailsThatYouCanMake.push(cocktail.name);
             }
+            
         }
 
         possibleDrinksList.innerHTML = '';
@@ -403,11 +408,12 @@ ingredientInput.addEventListener("keyup", function (event) {
                 drinkLink.href = drinkURL;
                 drinkItem.appendChild(drinkLink);
                 possibleDrinksList.appendChild(drinkItem);
+               
             } else {
                 drinkItem.textContent = drinkName;
                 possibleDrinksList.appendChild(drinkItem);
             }
-          
+    
         }
       
          }

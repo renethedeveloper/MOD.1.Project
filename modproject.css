@@ -24,10 +24,10 @@
     letter-spacing: 3px;
     font-weight: 800;
     margin-right: 40px;
-    font-size: x-large;
-    margin-left: 80px;
+    font-size: large;
+    margin-left: 50px;
     height: 300px;
-    width: 200px;
+    width: 300px;
 }
 .listTitle{
     height: 20px;
@@ -146,7 +146,9 @@ margin-top: 50px;
   margin:30px;
   width: 200px;
 }
-
+li{
+  width: 300px;
+}
 
 
     
@@ -165,22 +167,22 @@ margin-top: 50px;
 .header11,
 .header12,
 .header13 {
-    font-size: 4em;
+    font-size: 5em;
     text-align:start;
-    animation: sparkle 4s infinite; /* Add sparkle animation */
+    animation: sparkle 2s infinite; /* Add sparkle animation */
 }
 
 @keyframes sparkle {
     0% {
-        color: hotpink;
-        text-shadow: 0 0 10px #710e1b, 0 0 10px #710e1b, 0 0 10px#710e1b;
+        color: rgb(94, 81, 81);
+        text-shadow: 0 0 10px #710e1b, 0 0 10px #0e3271, 0 0 10px#71550e;
     }
     100% {
-        color: fuchsia;
+        color:#6A0DAD;;
         text-shadow: none;
     }
     50% {
-        color: deeppink;
+        color: #00FFFF;
         text-shadow: 0 0 10px #FFFF99, 0 0 10px#FFFF99, 0 0 10px #FFFF99;
     }
 }
