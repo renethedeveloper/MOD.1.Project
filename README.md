@@ -69,7 +69,7 @@ We welcome contributions from the community! If you'd like to contribute to the 
 5. Create a pull request.
 
 ## License
-None
+None.
 
 ---
 
