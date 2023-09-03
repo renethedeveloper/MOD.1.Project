@@ -69,9 +69,7 @@ We welcome contributions from the community! If you'd like to contribute to the 
 5. Create a pull request.
 
 ## License
-
-This project is licensed under the [MIT License](LICENSE).
+None
 
 ---
 
-Feel free to customize this README further and include any additional information that you think would be helpful for users and contributors. Good luck with your bartending app, "Dealer's Choice"!
